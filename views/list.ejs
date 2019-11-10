@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="box" id="heading">
+    <h1><%= day %></h1>
+  </div>
+
+  <div class="box">
+    <% tasks.forEach((task) => { %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= task.name %></p>
+      </div>
+    <% }); %>
+  </div>
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="newTask" placeholder="Add your new task">
+    <button type="submit">+</button>
+  </form>
+
+
+</body>
+</html>
